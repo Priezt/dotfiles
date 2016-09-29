@@ -1,0 +1,44 @@
+syntax on
+set autoindent
+set encoding=utf-8
+set tabstop=4
+set shiftwidth=4
+colorscheme desert
+
+hi TabLineFill ctermfg=LightGreen ctermbg=DarkGreen
+hi TabLine ctermfg=Blue ctermbg=DarkGreen
+hi TabLineSel ctermfg=Yellow ctermbg=Blue
+
+set tags=tags;
+set autochdir
+
+set incsearch
+
+au BufRead,BufNewFile *.tt set syntax=html
+
+let mapleader = ","
+nmap <Leader>w :w<cr>
+" nmap <Leader>t :!ctags -R<cr>
+nmap <Leader>tc :tabclose<cr>
+nmap <Leader>n :set number!<cr>
+nmap <Leader>f :set foldmethod=syntax<cr>:set foldlevelstart=1<cr>:let perl_fold=1<cr>:set filetype=perl<cr>
+
+" imap <C-j> <esc>yypp$^c$}<esc>kkA{<esc>j>>$^c$
+" imap <C-k> <esc>yypp$^c$end<esc>kkA<space>do<esc>j>>$^c$
+" imap <C-l> <esc>yyp$^c$end<esc>kA<space>do<space>\|\|<esc>i
+nmap <C-h> gT
+nmap <C-l> gt
+nmap <C-u> <esc>:Unite<space>
+nmap <C-s> :w<cr>
+
+function! AppendLineToReg()
+	let @"=@".getline('.')."\n"
+endfunction
+nmap YY :call<space>AppendLineToReg()<cr>
+
+au BufRead,BufNewFile *.js imap fx function(){}<esc>
+au BufRead,BufNewFile *.py set expandtab
+
+" let g:EasyMotion_do_mapping = 0 " Disable default mappings
+" nmap s <Plug>(easymotion-s)
+" let g:EasyMotion_smartcase = 1
