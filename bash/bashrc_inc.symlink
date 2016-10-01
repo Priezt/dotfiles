@@ -1,0 +1,24 @@
+export PS1='\[\033[01;32m\]\u@\h:\W\$\[\033[00m\] '
+export EDITOR=vim
+
+export PATH=$HOME/gocode/bin:$HOME/local/bin:$HOME/tools:$PATH:$HOME/node_modules/.bin
+export GIT_SSL_NO_VERIFY=true
+
+export GOPATH=~/gocode
+export PATH=./node_modules/.bin:$PATH
+
+#export HTTP_CLIENT="wget --no-check-certificate -O"
+export HTTP_CLIENT="curl --insecure -f -L -o"
+
+source ~/.dotfiles/bash/alias.sh
+source ~/.dotfiles/bash/mark.sh
+source ~/.dotfiles/bash/git-completion.bash
+source ~/.dotfiles/bash/completion.sh
+
+# to install smartcd
+# cd /tmp ; git clone https://github.com/cxreg/smartcd.git ; cd smartcd ; make install ; source load_smartcd ; smartcd config
+# https://github.com/cxreg/smartcd
+
+if [ -f ~/.smartcd_config ]; then
+	. ~/.smartcd_config
+fi
