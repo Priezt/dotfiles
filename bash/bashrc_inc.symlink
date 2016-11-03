@@ -24,3 +24,6 @@ source ~/.dotfiles/bash/completion.sh
 if [ -f ~/.smartcd_config ]; then
 	. ~/.smartcd_config
 fi
+
+alias cpanm="cpanm --mirror http://mirrors.163.com/cpan/"
+
