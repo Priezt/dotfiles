@@ -49,6 +49,8 @@ setw -g mode-keys vi
 
 bind -t vi-copy 'v' begin-selection
 bind -t vi-copy 'y' copy-selection
+bind -T copy-mode-vi 'v' send -X begin-selection
+bind -T copy-mode-vi 'y' send -X copy-selection
 
 unbind +
 bind + new-window -d -n tmp \; swap-pane -s tmp.0 \; select-window -t tmp
