@@ -17,7 +17,7 @@ set incsearch
 au BufRead,BufNewFile *.tt set syntax=html
 
 let mapleader = ","
-nmap <Leader>w :w<cr>
+" nmap <Leader>w :w<cr>
 " nmap <Leader>t :!ctags -R<cr>
 nmap <Leader>tc :tabclose<cr>
 nmap <Leader>n :set number!<cr>
