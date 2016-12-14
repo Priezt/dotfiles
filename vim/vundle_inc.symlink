@@ -57,6 +57,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'chemzqm/unite-git-log'
 Plugin 'vimwiki'
+	" ,ww
 
 call vundle#end()
 filetype plugin indent on     " required!
