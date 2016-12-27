@@ -1,2 +1,2 @@
-bind P !git push
+bind status P !git push
 
