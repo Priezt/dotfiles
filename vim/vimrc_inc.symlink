@@ -30,6 +30,8 @@ nmap <C-h> gT
 nmap <C-l> gt
 nmap <C-u> <esc>:Unite<space>
 nmap <C-s> :w<cr>
+vmap <Leader>y :w! ~/.vim_global_clipboard<cr>
+nmap <Leader>p :r ~/.vim_global_clipboard<cr>
 
 function! AppendLineToReg()
 	let @"=@".getline('.')."\n"
