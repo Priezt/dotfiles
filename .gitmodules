@@ -28,3 +28,6 @@
 [submodule "vim/vim.symlink/bundle/vimwiki"]
 	path = vim/vim.symlink/bundle/vimwiki
 	url = https://github.com/vimwiki/vimwiki.git
+[submodule "vim/vim.symlink/bundle/python-mode"]
+	path = vim/vim.symlink/bundle/python-mode
+	url = https://github.com/python-mode/python-mode.git
