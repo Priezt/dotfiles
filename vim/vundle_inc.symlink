@@ -58,7 +58,7 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'chemzqm/unite-git-log'
 Plugin 'vimwiki'
 	" ,ww
-Plugin 'python-mode/python-mode'
+" Plugin 'python-mode/python-mode'
 
 call vundle#end()
 filetype plugin indent on     " required!
