@@ -44,6 +44,21 @@ nmap YY :call<space>AppendLineToReg()<cr>
 au BufRead,BufNewFile *.js imap fx function(){}<esc>
 au BufRead,BufNewFile *.py set expandtab
 
+function HeaderPython()
+	call setline(1, "#!/usr/bin/env python")
+	call append(1, "# -*- coding: utf-8 -*-")
+	normal G
+	normal o
+endf
+autocmd bufnewfile *.py call HeaderPython()
+
+function HeaderPerl()
+	call setline(1, "#!/usr/bin/env perl")
+	normal G
+	normal o
+endf
+autocmd bufnewfile *.pl call HeaderPerl()
+
 " let g:EasyMotion_do_mapping = 0 " Disable default mappings
 " nmap s <Plug>(easymotion-s)
 " let g:EasyMotion_smartcase = 1
