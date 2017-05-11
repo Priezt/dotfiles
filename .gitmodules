@@ -34,3 +34,6 @@
 [submodule "vim/vim.symlink/bundle/python-mode"]
 	path = vim/vim.symlink/bundle/python-mode
 	url = https://github.com/python-mode/python-mode.git
+[submodule "subs/Command-Line-Youdao-Dictionary"]
+	path = subs/Command-Line-Youdao-Dictionary
+	url = https://github.com/qhwa/Command-Line-Youdao-Dictionary.git
