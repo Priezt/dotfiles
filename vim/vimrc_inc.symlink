@@ -22,6 +22,9 @@ let mapleader = ","
 nmap <Leader>tc :tabclose<cr>
 nmap <Leader>n :set number!<cr>
 nmap <Leader>f :set foldmethod=syntax<cr>:set foldlevelstart=1<cr>:let perl_fold=1<cr>:set filetype=perl<cr>
+nmap <Leader>c1 :colorscheme desert<cr>
+nmap <Leader>c2 :colorscheme darkblue<cr>
+nmap <Leader>c3 :colorscheme default<cr>
 
 " imap <C-j> <esc>yypp$^c$}<esc>kkA{<esc>j>>$^c$
 " imap <C-k> <esc>yypp$^c$end<esc>kkA<space>do<esc>j>>$^c$
