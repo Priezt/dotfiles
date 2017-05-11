@@ -19,15 +19,18 @@
 [submodule "vim/vim.symlink/bundle/taglist.vim"]
 	path = vim/vim.symlink/bundle/taglist.vim
 	url = https://github.com/vim-scripts/taglist.vim.git
+	ignore = dirty
 [submodule "vim/vim.symlink/bundle/Vundle.vim"]
 	path = vim/vim.symlink/bundle/Vundle.vim
 	url = https://github.com/gmarik/Vundle.vim.git
 [submodule "vim/vim.symlink/bundle/vim-expand-region"]
 	path = vim/vim.symlink/bundle/vim-expand-region
 	url = https://github.com/terryma/vim-expand-region.git
+	ignore = dirty
 [submodule "vim/vim.symlink/bundle/vimwiki"]
 	path = vim/vim.symlink/bundle/vimwiki
 	url = https://github.com/vimwiki/vimwiki.git
+	ignore = dirty
 [submodule "vim/vim.symlink/bundle/python-mode"]
 	path = vim/vim.symlink/bundle/python-mode
 	url = https://github.com/python-mode/python-mode.git
