@@ -37,3 +37,6 @@
 [submodule "subs/Command-Line-Youdao-Dictionary"]
 	path = subs/Command-Line-Youdao-Dictionary
 	url = https://github.com/qhwa/Command-Line-Youdao-Dictionary.git
+[submodule "vim/vim.symlink/bundle/syntastic"]
+	path = vim/vim.symlink/bundle/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
