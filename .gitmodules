@@ -40,3 +40,6 @@
 [submodule "vim/vim.symlink/bundle/syntastic"]
 	path = vim/vim.symlink/bundle/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "subs/PathPicker"]
+	path = subs/PathPicker
+	url = https://github.com/facebook/PathPicker.git
