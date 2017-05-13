@@ -43,3 +43,6 @@
 [submodule "subs/PathPicker"]
 	path = subs/PathPicker
 	url = https://github.com/facebook/PathPicker.git
+[submodule "subs/fzf"]
+	path = subs/fzf
+	url = https://github.com/junegunn/fzf.git
