@@ -66,3 +66,5 @@ bind ` copy-mode \; send-keys k 0 space '$' C-m \; paste-buffer
 
 set-window-option -g pane-base-index 1
 
+bind S switch-client -l
+
