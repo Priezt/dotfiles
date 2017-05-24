@@ -62,3 +62,6 @@ autocmd bufnewfile *.pl call HeaderPerl()
 " let g:EasyMotion_do_mapping = 0 " Disable default mappings
 " nmap s <Plug>(easymotion-s)
 " let g:EasyMotion_smartcase = 1
+
+source ~/.vim_abbr_inc
+
