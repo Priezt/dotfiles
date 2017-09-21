@@ -1,2 +1,3 @@
 bind status P !git push
+set wrap-lines = yes
 
