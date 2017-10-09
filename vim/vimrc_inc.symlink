@@ -16,6 +16,8 @@ set incsearch
 
 au BufRead,BufNewFile *.tt set syntax=html
 
+set listchars=tab:>-
+
 let mapleader = ","
 " nmap <Leader>w :w<cr>
 " nmap <Leader>t :!ctags -R<cr>
@@ -25,6 +27,7 @@ nmap <Leader>f :set foldmethod=syntax<cr>:set foldlevelstart=1<cr>:let perl_fold
 nmap <Leader>c1 :colorscheme desert<cr>
 nmap <Leader>c2 :colorscheme darkblue<cr>
 nmap <Leader>c3 :colorscheme default<cr>
+nmap <Leader>L :set list!<cr>
 
 " imap <C-j> <esc>yypp$^c$}<esc>kkA{<esc>j>>$^c$
 " imap <C-k> <esc>yypp$^c$end<esc>kkA<space>do<esc>j>>$^c$
