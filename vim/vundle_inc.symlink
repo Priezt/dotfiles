@@ -36,6 +36,12 @@ Plugin 'Shougo/unite.vim'
 Plugin 'vim-scripts/openscad.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+" cs)]
+" cs'<q>
+" dst
+" ysiw]
+" yss]
+" V/v -> S]
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 	nmap <Leader>gl :tabedit<cr>:Gist -l<cr>
