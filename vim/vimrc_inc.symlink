@@ -30,6 +30,7 @@ nmap <Leader>c3 :colorscheme default<cr>
 nmap <Leader>L :set list!<cr>
 nmap <Leader>t :Tags<cr>
 nmap <Leader>f :Files<cr>
+nmap <Leader>a :Ag<cr>
 
 
 " imap <C-j> <esc>yypp$^c$}<esc>kkA{<esc>j>>$^c$
