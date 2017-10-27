@@ -46,3 +46,6 @@
 [submodule "subs/fzf"]
 	path = subs/fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule "vim/vim.symlink/bundle/fzf.vim"]
+	path = vim/vim.symlink/bundle/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
