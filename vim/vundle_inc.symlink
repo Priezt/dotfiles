@@ -30,8 +30,9 @@ Plugin 'ZenCoding.vim'
 Plugin 'taglist.vim'
 	nmap <C-y> :TlistToggle<cr>
 Plugin 'mileszs/ack.vim'
-Plugin 'kien/ctrlp.vim'
-	nmap <Leader>cc :CtrlPClearCache<cr>
+" say goodbye to ctrl-p, use the cool fzf instead
+"Plugin 'kien/ctrlp.vim'
+	"nmap <Leader>cc :CtrlPClearCache<cr>
 Plugin 'Shougo/unite.vim'
 Plugin 'vim-scripts/openscad.vim'
 Plugin 'tpope/vim-fugitive'
