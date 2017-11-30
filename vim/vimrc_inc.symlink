@@ -32,6 +32,7 @@ nmap <Leader>t :Tags<cr>
 nmap <Leader>f :Files<cr>
 nmap <C-p> :Files<cr>
 nmap <Leader>a :Ag<cr>
+nmap <Leader>* :Ag <C-r><C-w><cr>
 nmap <Leader>G :GitGutterToggle<cr>
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
