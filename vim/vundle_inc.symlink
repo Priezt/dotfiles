@@ -79,6 +79,7 @@ Plugin 'airblade/vim-gitgutter'
 	let g:gitgutter_enabled = 0
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+	let g:vim_markdown_folding_disabled = 1
 
 call vundle#end()
 filetype plugin indent on     " required!
