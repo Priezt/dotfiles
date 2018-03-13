@@ -67,3 +67,6 @@
 [submodule "vim/vim.symlink/bundle/vim-db"]
 	path = vim/vim.symlink/bundle/vim-db
 	url = https://github.com/tpope/vim-db.git
+[submodule "vim/vim.symlink/bundle/webapi-vim"]
+	path = vim/vim.symlink/bundle/webapi-vim
+	url = https://github.com/mattn/webapi-vim.git

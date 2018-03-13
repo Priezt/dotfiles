@@ -46,7 +46,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 	nmap <Leader>gl :tabedit<cr>:Gist -l<cr>
-	vmap g :Gist -p<cr>
+	" vmap g :Gist -p<cr>
 " Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 	" enter for/while/... and press <TAB>
