@@ -68,3 +68,5 @@ set-window-option -g pane-base-index 1
 
 bind S switch-client -l
 
+set -g allow-rename off
+
