@@ -70,3 +70,6 @@ bind S switch-client -l
 
 set -g allow-rename off
 
+bind N swap-window -t +1
+bind P swap-window -t -1
+
