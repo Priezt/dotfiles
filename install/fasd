@@ -1,0 +1,8 @@
+#!/bin/sh
+
+sudo add-apt-repository ppa:aacebedo/fasd
+sudo apt-get update
+sudo apt-get install fasd
+
+eval "$(fasd --init auto)"
+

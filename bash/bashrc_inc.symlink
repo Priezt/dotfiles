@@ -27,3 +27,5 @@ fi
 
 alias cpanm="cpanm --mirror http://mirrors.163.com/cpan/"
 
+eval "$(fasd --init auto)"
+alias v='f -e vim'
