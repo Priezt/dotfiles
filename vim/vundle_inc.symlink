@@ -47,8 +47,13 @@ Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 	nmap <Leader>gl :tabedit<cr>:Gist -l<cr>
 	" vmap g :Gist -p<cr>
-" Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+Plugin 'SirVer/ultisnips'
+	let g:UltiSnipsExpandTrigger="<tab>"
+	let g:UltiSnipsJumpForwardTrigger="<tab>"
+	let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+	let g:UltiSnipsEditSplit="vertical"
+Plugin 'Priezt/vim-snippets'
+" Plugin 'honza/vim-snippets'
 	" enter for/while/... and press <TAB>
 Plugin 'terryma/vim-expand-region'
 	" press '+' to select wider area
