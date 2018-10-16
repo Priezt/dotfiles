@@ -1,2 +1,6 @@
 source ~/.vimrc_inc
 source ~/.vundle_inc
+
+if filereadable(expand("~/.vimrc_local"))
+	source ~/.vimrc_local
+endif
