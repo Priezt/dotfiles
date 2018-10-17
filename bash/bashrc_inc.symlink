@@ -27,5 +27,7 @@ fi
 
 alias cpanm="cpanm --mirror http://mirrors.163.com/cpan/"
 
-eval "$(fasd --init auto)"
-alias v='f -e vim'
+if which fasd > /dev/null ; then
+	eval "$(fasd --init auto)"
+	alias v='f -e vim'
+fi
