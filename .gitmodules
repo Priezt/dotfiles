@@ -76,3 +76,6 @@
 [submodule "vim/vim.symlink/bundle/ultisnips"]
 	path = vim/vim.symlink/bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+[submodule "subs/ydcv"]
+	path = subs/ydcv
+	url = https://github.com/felixonmars/ydcv.git
