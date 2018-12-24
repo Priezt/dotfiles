@@ -1,2 +1,7 @@
 bind status P !git push
+bind status v !tmux new-window "vim -c GitGutterToggle -c GitGutterNextHunk %(file)"
+set wrap-lines = yes
+bind stage w :toggle wrap-lines
+bind tree L !tmux new-window "tig %(file)"
+
 

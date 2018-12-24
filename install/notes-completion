@@ -1,0 +1,4 @@
+#!/bin/sh
+
+curl https://cdn.rawgit.com/pimterry/notes/latest-release/notes.bash_completion > /usr/share/bash-completion/completions/notes
+

@@ -30,20 +30,31 @@ Plugin 'ZenCoding.vim'
 Plugin 'taglist.vim'
 	nmap <C-y> :TlistToggle<cr>
 Plugin 'mileszs/ack.vim'
-Plugin 'kien/ctrlp.vim'
-	nmap <Leader>cc :CtrlPClearCache<cr>
+" say goodbye to ctrl-p, use the cool fzf instead
+"Plugin 'kien/ctrlp.vim'
+	"nmap <Leader>cc :CtrlPClearCache<cr>
 Plugin 'Shougo/unite.vim'
 Plugin 'vim-scripts/openscad.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+" cs)]
+" cs'<q>
+" dst
+" ysiw]
+" yss]
+" V/v -> S]
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 	nmap <Leader>gl :tabedit<cr>:Gist -l<cr>
-	vmap g :Gist -p<cr>
-" Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+	" vmap g :Gist -p<cr>
+Plugin 'SirVer/ultisnips'
+	let g:UltiSnipsExpandTrigger="<tab>"
+	let g:UltiSnipsJumpForwardTrigger="<tab>"
+	let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+	let g:UltiSnipsEditSplit="vertical"
+Plugin 'Priezt/vim-snippets'
+" Plugin 'honza/vim-snippets'
 	" enter for/while/... and press <TAB>
-Plugin 'junegunn/fzf'
 Plugin 'terryma/vim-expand-region'
 	" press '+' to select wider area
 Plugin 'python.vim'
@@ -67,6 +78,14 @@ Plugin 'vimwiki'
 " 	let g:syntastic_auto_loc_list = 1
 " 	let g:syntastic_check_on_open = 1
 " 	let g:syntastic_check_on_wq = 0
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+Plugin 'airblade/vim-gitgutter'
+	let g:gitgutter_enabled = 0
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+	let g:vim_markdown_folding_disabled = 1
+Plugin 'tpope/vim-db'
 
 call vundle#end()
 filetype plugin indent on     " required!
