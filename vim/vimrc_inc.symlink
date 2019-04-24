@@ -72,6 +72,13 @@ function HeaderPerl()
 endf
 autocmd bufnewfile *.pl call HeaderPerl()
 
+function HeaderShell()
+	call setline(1, "#!/bin/sh")
+	normal G
+	normal o
+endf
+autocmd bufnewfile *.sh call HeaderShell()
+
 " let g:EasyMotion_do_mapping = 0 " Disable default mappings
 " nmap s <Plug>(easymotion-s)
 " let g:EasyMotion_smartcase = 1
