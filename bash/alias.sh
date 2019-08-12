@@ -24,3 +24,5 @@ alias gitsearch='git rev-list --all | xargs git grep -F'
 cls() { cd "$1" && ls; }
 alias ipinfo="curl ifconfig.me && curl ifconfig.me/host"
 
+alias dc=docker-compose
+
