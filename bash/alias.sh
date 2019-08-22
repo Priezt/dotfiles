@@ -25,4 +25,4 @@ cls() { cd "$1" && ls; }
 alias ipinfo="curl ifconfig.me && curl ifconfig.me/host"
 
 alias dc=docker-compose
-
+alias tpl='yes y | tmuxp load .'
