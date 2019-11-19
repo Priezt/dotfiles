@@ -31,3 +31,8 @@ if which fasd > /dev/null ; then
 	eval "$(fasd --init auto)"
 	alias v='f -e vim'
 fi
+
+if which navi > /dev/null ; then
+	source "$(navi widget bash)"
+fi
+
