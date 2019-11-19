@@ -1,1 +1,4 @@
-../subs/navi/navi
+#!/bin/sh
+
+cd ~/.dotfiles/subs/navi
+./navi
