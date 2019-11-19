@@ -79,3 +79,6 @@
 [submodule "subs/ydcv"]
 	path = subs/ydcv
 	url = https://github.com/felixonmars/ydcv.git
+[submodule "subs/navi"]
+	path = subs/navi
+	url = https://github.com/denisidoro/navi.git
