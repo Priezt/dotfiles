@@ -1,0 +1,5 @@
+% nginx
+
+# test Nginx configuration
+nginx -t
+

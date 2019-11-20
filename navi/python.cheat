@@ -1,0 +1,5 @@
+% python
+
+# simple web server
+python -m SimpleHTTPServer <port>
+

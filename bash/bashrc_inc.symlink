@@ -34,6 +34,9 @@ fi
 
 if which navi > /dev/null ; then
 	export NAVI_PATH=~/.dotfiles/navi:~/.navi:$NAVI_PATH
+	if ! [ -d ~/.navi ] ; then
+		mkdir -p ~/.navi
+	fi
 	source "$(navi widget bash)"
 fi
 

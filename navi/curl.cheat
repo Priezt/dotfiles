@@ -1,0 +1,8 @@
+% curl
+
+# Weather
+curl wttr.in/Shanghai
+
+# Get IP
+curl ipinfo.io/ip
+curl ifconfig.io

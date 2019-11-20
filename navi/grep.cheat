@@ -1,0 +1,5 @@
+% grep
+
+# grep by patterns in file
+grep -f <file_of_patterns>
+

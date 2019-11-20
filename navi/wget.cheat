@@ -1,0 +1,8 @@
+% wget
+
+# resume downloading
+wget -c
+
+# save filename according to Content-Disposition 
+wget --content-disposition
+

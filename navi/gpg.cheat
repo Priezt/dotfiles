@@ -1,0 +1,7 @@
+% gpg
+
+# encrypt file
+gpg --passphrase <password> -c <filename>
+# decrypt file
+gpg --passphrase <password> <filename>
+
