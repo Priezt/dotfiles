@@ -1,0 +1,6 @@
+% ssh
+
+# socks5 proxy
+ssh -D <socks_proxy_port> <server>
+
+$ server: grep -i '^host ' ~/.ssh/config | sed 's/host *//i'

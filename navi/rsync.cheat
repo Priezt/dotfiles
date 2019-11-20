@@ -1,0 +1,5 @@
+% rsync
+
+# preserve all attributes
+rsync -aqxP <from_path> <to_path>
+
