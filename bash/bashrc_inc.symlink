@@ -33,6 +33,7 @@ if which fasd > /dev/null ; then
 fi
 
 if which navi > /dev/null ; then
+	export NAVI_PATH=~/.dotfiles/navi:~/.navi:$NAVI_PATH
 	source "$(navi widget bash)"
 fi
 
