@@ -1,4 +1,4 @@
 #!/bin/sh
 
 cd ~/.dotfiles/subs/fzf
-yes '' | ./install
+./install
