@@ -6,6 +6,8 @@ nmap -sS -sV --script=vulscan --script-args vulscandb=<vulscandb_files> -p <port
 
 # install vulnerability db: vulscan
 cd /usr/share/nmap/scripts && git clone https://github.com/scipag/vulscan.git
+# cd /usr/share/nmap/scripts/vulscan/utilities/updater && bash updateFiles.sh
+# or: git pull
 
 # update script db
 nmap --script-updatedb
