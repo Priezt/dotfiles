@@ -33,7 +33,9 @@ if which fasd > /dev/null ; then
 fi
 
 if which navi > /dev/null ; then
-	export NAVI_PATH=~/.dotfiles/navi:~/.navi:$NAVI_PATH
+	if ! echo $NAVI_PATH | grep .dotfiles/navi > /dev/null ; then
+		export NAVI_PATH=~/.dotfiles/navi:~/.navi:$NAVI_PATH
+	fi
 	if ! [ -d ~/.navi ] ; then
 		mkdir -p ~/.navi
 	fi
