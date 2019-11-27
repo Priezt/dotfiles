@@ -1,14 +1,13 @@
 % nmap
 
 # scan vulnerability
-nmap -sS -sV --script=vulscan/vulscan.nse -p <ports> <host>
-nmap -sS -sV --script=vulners -p <ports> <host>
+nmap -sS -sV --script=vulscan -p <ports> <host>
+nmap -sS -sV --script=vulscan --script-args vulscandb=<vulscandb_files> -p <ports> <host>
 
-# install vulnerability db
-cd /usr/share/nmap/scripts && git clone https://github.com/vulnersCom/nmap-vulners.git && cp /usr/share/nmap/scripts/nmap-vulners/vulners.nse /usr/share/nmap/scripts/
+# install vulnerability db: vulscan
 cd /usr/share/nmap/scripts && git clone https://github.com/scipag/vulscan.git
 
 # update script db
 nmap --script-updatedb
 
-
+$ vulscandb_files: ls /usr/share/nmap/scripts/vulscan/ | grep csv
