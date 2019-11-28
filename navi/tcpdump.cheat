@@ -1,0 +1,6 @@
+% tcpdump
+
+tcpdump -i <interface> -n udp dst port 43
+tcpdump -i <interface> -n tcp dst port 43
+
+$ interface: ip link show | grep -e '^[0-9]' | awk '{print $2}' | sed 's/:.*//'
