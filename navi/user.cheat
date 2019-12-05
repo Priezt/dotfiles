@@ -1,0 +1,9 @@
+% user
+
+# create user and its home directory
+sudo useradd --create-home <username>
+
+# add user to group
+sudo usermod -a -G <groupname> <username>
+sudo gpasswd -a <username> <groupname>
+

@@ -1,0 +1,5 @@
+% docker
+
+# whiteboard: http://<IP>:58080/?whiteboardid=board1&username=priezt
+docker run -d --name whiteboard -p 58080:8080 rofl256/whiteboard
+

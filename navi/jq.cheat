@@ -1,0 +1,14 @@
+% jq, json
+
+# strip quote
+jq -r .name
+
+# use if
+jq '.info.image_signatures[] | if .hash=="ff2b0000000029b6" then .url else null end'
+
+# pipe
+jq '.info.image_signatures[] | .hash'
+
+# reconstruct object
+pm2 jlist | jq '.[] | {name:.name, dir:.pm2_env.pm_cwd, command:.pm2_env.pm_exec_path}' | jq -s 'map({(.name): {dir,command}}) | add'
+

@@ -1,0 +1,11 @@
+% postfix
+
+# move all messages from "deferred" to "active"
+postqueue -f
+
+# move all messages from "deferred" to "incoming"
+postsuper -r ALL deferred
+
+# show messages statistics in destination domains
+qshape
+

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if ! which fzf > /dev/null ; then
+	echo install fzf first
+	cd ~/.dotfiles/install/
+	./fzf
+fi
+
+cd ~/.dotfiles/subs/navi/
+make install
+

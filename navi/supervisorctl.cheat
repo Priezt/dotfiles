@@ -1,0 +1,11 @@
+% supervisorctl
+
+# supervisor start job
+supervisorctl start <job>
+# supervisor stop job
+supervisorctl stop <job>
+# supervisor restart job
+supervisorctl restart <job>
+
+$ job: supervisorctl status --- --column 1
+
