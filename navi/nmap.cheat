@@ -9,6 +9,9 @@ cd /usr/share/nmap/scripts && git clone https://github.com/scipag/vulscan.git
 # cd /usr/share/nmap/scripts/vulscan/utilities/updater && bash updateFiles.sh
 # or: git pull
 
+# detect waf
+nmap -p 80,443 --script=http-waf-detect <host>
+
 # update script db
 nmap --script-updatedb
 
