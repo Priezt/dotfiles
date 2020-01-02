@@ -1,0 +1,35 @@
+% virtualbox
+
+# list available OS types
+VBoxManage list ostypes
+
+# create vhd, 32G
+VBoxManage createhd --filename win7.vdi --size 32768 --format VDI
+
+# attach hd and cdrom
+VBoxManage storagectl win7 --name "SATA Controller" --add sata --controller IntelAhci
+VBoxManage storageattach win7 --storagectl "SATA Controller" --port 0 --device 0 --type hdd --medium "`pwd`/win7.vdi"
+VBoxManage storagectl win7 --name "IDE Controller" --add ide --controller PIIX4
+VBoxManage storageattach win7 --storagectl "IDE Controller" --port 1 --device 0 --type dvddrive --medium "`pwd`/cn_windows_7_ultimate_with_sp1_x64_dvd_677408.iso"
+
+# VNC
+VBoxManage modifyvm win7 --vrde on
+VBoxManage modifyvm win7 --vrdemulticon on --vrdeport 10001
+
+# boot order
+VBoxManage modifyvm win7 --boot1 dvd --boot2 disk --boot3 none --boot4 none 
+
+# create vm
+VBoxManage createvm --name win7 --ostype Windows7_64 --register
+
+# set memory, 2G
+VBoxManage modifyvm win7 --memory 2048
+
+# set network to NAT
+VBoxManage modifyvm win7 --nic1 nat
+
+VBoxManage modifyvm win7 --ioapic on
+
+# start vm
+VBoxHeadless --startvm win7
+
