@@ -24,3 +24,10 @@ complete -c sudo
 
 #export IFS=" "
 #complete -W "submit sync integrate edit revert" p4 # this shit will prevent p4 from filename completion
+
+if which kubectl > /dev/null ; then
+	source <(kubectl completion bash)
+	alias k=kubectl
+	source <(kubectl completion bash | sed s/kubectl/k/g)
+fi
+
