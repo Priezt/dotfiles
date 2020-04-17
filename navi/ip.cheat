@@ -1,0 +1,12 @@
+% ip
+
+# add ip address
+ip addr add <cidr> dev <interface>
+
+# delete ip address
+ip addr delete <cidr> dev <interface>
+
+# show ip address
+ip addr show <interface>
+
+$ interface: ip link show | grep '<' | awk '{print $2}' | sed s/://
