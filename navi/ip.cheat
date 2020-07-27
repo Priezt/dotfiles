@@ -12,4 +12,7 @@ ip addr delete <cidr> dev <interface>
 # show ip address
 ip addr show <interface>
 
+# add route
+ip route add <target_cidr> via <gw> dev <interface>
+
 $ interface: ip link show | grep '<' | awk '{print $2}' | sed s/://
