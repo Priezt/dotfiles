@@ -1,5 +1,8 @@
 % ip
 
+# show network interfaces
+ip link show
+
 # add ip address
 ip addr add <cidr> dev <interface>
 
