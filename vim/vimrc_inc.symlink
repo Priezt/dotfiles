@@ -53,6 +53,7 @@ imap <C-b> {}<esc>i<cr><esc>O
 imap <C-f> ()<esc>i
 imap <C-g> ""<esc>i
 imap <C-v> {}<esc>i
+imap <C-e> []<esc>i
 
 function! AppendLineToReg()
 	let @"=@".getline('.')."\n"
