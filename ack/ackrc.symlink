@@ -1,0 +1,6 @@
+--ignore-dir=.git
+--ignore-dir=log
+--ignore-dir=logs
+--ignore-dir=node_modules
+--ignore-dir=site-packages
+

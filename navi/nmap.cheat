@@ -15,4 +15,7 @@ nmap -p 80,443 --script=http-waf-detect <host>
 # update script db
 nmap --script-updatedb
 
+# ssl protocols
+nmap --script ssl-enum-ciphers -p 443 <host>
+
 $ vulscandb_files: ls /usr/share/nmap/scripts/vulscan/ | grep csv

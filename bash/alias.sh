@@ -26,3 +26,5 @@ alias ipinfo="curl ifconfig.me && curl ifconfig.me/host"
 
 alias dc=docker-compose
 alias tpl='yes y | tmuxp load .'
+
+alias dive='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest'

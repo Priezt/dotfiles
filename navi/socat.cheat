@@ -1,0 +1,4 @@
+% socat
+
+# UDP to UDP
+socat UDP4-RECVFROM:<src_port>,fork UDP4-SENDTO:<dest_ip>:<dest_port>

@@ -1,0 +1,10 @@
+% asciinema
+
+# install
+pip3 install asciinema
+
+# record
+asciinema rec <save_filename>
+
+# play
+asciinema play <save_filename>

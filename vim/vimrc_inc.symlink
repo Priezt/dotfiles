@@ -49,6 +49,11 @@ nmap <C-s> :w<cr>
 vmap <Leader>y :w! ~/.vim_global_clipboard<cr>
 nmap <Leader>p :r ~/.vim_global_clipboard<cr>
 " imap <C-f> function(){}<esc>i<cr><esc>O
+imap <C-b> {}<esc>i<cr><esc>O
+imap <C-f> ()<esc>i
+imap <C-g> ""<esc>i
+imap <C-v> {}<esc>i
+imap <C-e> []<esc>i
 
 function! AppendLineToReg()
 	let @"=@".getline('.')."\n"

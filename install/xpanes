@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if ! [ -e ~/local/bin ] ; then
+	mkdir -p ~/local/bin
+fi
+
+wget https://raw.githubusercontent.com/greymd/tmux-xpanes/v4.1.2/bin/xpanes -O ~/local/bin/xpanes
+chmod +x ~/local/bin/xpanes
+

@@ -1,0 +1,4 @@
+% mysql
+
+# innotop
+perl -X `which innotop` -h <host> -u <user> -p <password> -P <port>
