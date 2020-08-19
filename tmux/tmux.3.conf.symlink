@@ -75,3 +75,7 @@ bind P swap-window -t -1
 
 run-shell ~/.dotfiles/tmux/plugins/tmux-resurrect/resurrect.tmux
 
+run-shell ~/.dotfiles/tmux/plugins/tmux-fpp/fpp.tmux
+set -g @fpp-key 'F'
+
+bind f command-prompt "find-window '%%'"
