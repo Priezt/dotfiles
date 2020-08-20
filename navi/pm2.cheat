@@ -1,0 +1,5 @@
+% pm2
+
+# install logrotate
+pm2 install pm2-logrotate
+
