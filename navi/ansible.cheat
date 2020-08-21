@@ -1,0 +1,10 @@
+% ansible
+
+# list hosts
+ansible --list-hosts all
+
+# ping
+ansible -m ping all
+
+# command
+ansible -m command -a "ls" all
