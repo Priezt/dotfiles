@@ -1,0 +1,4 @@
+% find
+
+# find old files to delete
+find <target_directory> -name '<name_pattern>' -mtime +<days> -exec rm -f {} \;
