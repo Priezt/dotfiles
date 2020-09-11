@@ -4,6 +4,6 @@
 ovftool -dm=thin -ds=<datastore> -n=<vm_name> --allowExtraConfig <ova_file> vi://root@<esx_host>
 
 # Export VM
-ovftool vi://root@<esx_host>/<vm_name> <export_ova_file>
+ovftool --allowExtraConfig vi://root@<esx_host>/<vm_name> <export_ova_file>
 
 $ ova_file: ls *.ov{a,f}
