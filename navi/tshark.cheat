@@ -1,0 +1,16 @@
+% tshark
+
+# smtp
+tshark -r <pcap_file> smtp
+
+# output json
+tshark -r <pcap_file> -T json
+
+# read filter doc
+man wireshark-filter
+
+# capture filter doc
+man pcap-filter
+
+$ pcap_file: ls | grep pcap
+
