@@ -28,3 +28,5 @@ alias dc=docker-compose
 alias tpl='yes y | tmuxp load .'
 
 alias dive='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest'
+
+alias tmd='tmux attach || tmux new'
