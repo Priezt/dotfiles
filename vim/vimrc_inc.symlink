@@ -79,7 +79,7 @@ endf
 autocmd bufnewfile *.pl call HeaderPerl()
 
 function HeaderShell()
-	call setline(1, "#!/bin/sh")
+	call setline(1, "#!/bin/bash")
 	normal G
 	normal o
 endf
