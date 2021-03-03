@@ -1,0 +1,4 @@
+#!/bin/sh
+
+go get github.com/dennis-tra/pcp
+go install github.com/dennis-tra/pcp/cmd/pcp
