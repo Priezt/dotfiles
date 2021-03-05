@@ -1,7 +1,16 @@
 % openssl
 
+# encrypt file
+openssl aes-256-cbc -a -salt -in <input_file> -out <output_file>
+
+# decrypt file
+openssl aes-256-cbc -d -a -salt -in <input_file> -out <output_file>
+
 # generate random password
 openssl rand -base64 20
 
 # check remote certificate
 echo | openssl s_client -showcerts -servername <server_name> -connect <server>:<port> 2>/dev/null | openssl x509 -inform pem -noout -text
+
+$ input_file: ls
+
