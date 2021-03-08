@@ -86,6 +86,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 	let g:vim_markdown_folding_disabled = 1
 Plugin 'tpope/vim-db'
+Plugin 'vim-peekaboo'
 
 call vundle#end()
 filetype plugin indent on     " required!
