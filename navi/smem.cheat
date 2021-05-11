@@ -1,5 +1,5 @@
 % smem
 
 # swap usage
-smem -t -p
+smem -t -p -s swap | tail -n 20
 
