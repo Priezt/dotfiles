@@ -1,0 +1,5 @@
+% smem
+
+# swap usage
+smem -t -p
+
