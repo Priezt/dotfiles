@@ -1,0 +1,5 @@
+% perf
+
+# when slow
+perf top --proc-map-timeout 10000
+
