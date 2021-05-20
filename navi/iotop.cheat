@@ -1,0 +1,5 @@
+% iotop
+
+# show top IO processes
+iotop -n 1 -b -o
+
