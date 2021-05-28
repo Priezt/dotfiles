@@ -5,3 +5,7 @@ dd if=/dev/zero of=/tmp/test-disk-write-speed.img bs=1G count=1 oflag=dsync
 
 # disk write latency
 dd if=/dev/zero of=/tmp/test-disk-write-latency.img bs=512 count=1000 oflag=dsync
+
+# hdparm
+hdparm -Tt <target_disk_device>
+
