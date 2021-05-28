@@ -1,0 +1,4 @@
+% hardware
+
+# raid info
+lspci -vv | grep -i raid
