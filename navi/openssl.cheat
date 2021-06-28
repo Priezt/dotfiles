@@ -12,5 +12,8 @@ openssl rand -base64 20
 # check remote certificate
 echo | openssl s_client -showcerts -servername <server_name> -connect <server>:<port> 2>/dev/null | openssl x509 -inform pem -noout -text
 
+# check local certificate file
+openssl x509 -in <cert_file> -text -noout
+
 $ input_file: ls
 
