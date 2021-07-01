@@ -1,0 +1,7 @@
+% swaks
+
+# send mail with auth
+swaks --server <server> --auth PLAIN --auth-user '<auth_user>' --auth-password '<auth_pass>' --to <to_address>
+
+# test auth
+swaks --server <server> --q AUTH --auth PLAIN --auth-user '<auth_user>' --auth-password '<auth_pass>'
