@@ -39,7 +39,7 @@ nmap <Leader>* :Ag <C-r><C-w><cr>
 nmap <Leader>G :GitGutterToggle<cr>
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
-
+nmap <Leader>T :!echo -n <C-r>" \| tmux load-buffer -<cr><cr>:echomsg "Saved to tmux buffer"<cr>
 
 " imap <C-j> <esc>yypp$^c$}<esc>kkA{<esc>j>>$^c$
 " imap <C-k> <esc>yypp$^c$end<esc>kkA<space>do<esc>j>>$^c$
