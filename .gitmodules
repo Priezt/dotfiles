@@ -88,3 +88,6 @@
 [submodule "vim/vim.symlink/bundle/vim-peekaboo"]
 	path = vim/vim.symlink/bundle/vim-peekaboo
 	url = https://github.com/junegunn/vim-peekaboo.git
+[submodule "vim/vim.symlink/bundle/vim-tbone"]
+	path = vim/vim.symlink/bundle/vim-tbone
+	url = https://github.com/tpope/vim-tbone.git
