@@ -14,6 +14,7 @@ export PATH=./node_modules/.bin:$PATH
 export HTTP_CLIENT="curl --insecure -f -L -o"
 
 export PATH=~/.npm-global/bin:$PATH
+export PATH=~/.cargo/bin:$PATH
 
 source ~/.dotfiles/bash/alias.sh
 source ~/.dotfiles/bash/mark.sh
