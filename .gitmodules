@@ -91,3 +91,6 @@
 [submodule "vim/vim.symlink/bundle/vim-tbone"]
 	path = vim/vim.symlink/bundle/vim-tbone
 	url = https://github.com/tpope/vim-tbone.git
+[submodule "vim/vim.symlink/bundle/jedi-vim"]
+	path = vim/vim.symlink/bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git

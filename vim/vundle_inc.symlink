@@ -88,6 +88,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-db'
 Plugin 'vim-peekaboo'
 Plugin 'vim-tbone'
+"Plugin 'davidhalter/jedi-vim'
 
 call vundle#end()
 filetype plugin indent on     " required!
