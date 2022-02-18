@@ -11,7 +11,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'comments.vim'
 " Plugin 'The-NERD-tree'
 Plugin 'scrooloose/nerdtree'
-"	nmap <C-e> :NERDTreeToggle<cr>
+	nmap <C-e> :NERDTreeToggle<cr>
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 	let g:NERDTreeIndicatorMapCustom = {
 		\ "Modified" : "*",
@@ -25,7 +25,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 		\ "Unknown" : "?"
 		\ }
 Plugin 'jistr/vim-nerdtree-tabs'
-	nmap <C-e> <plug>NERDTreeTabsToggle<cr>
+"	nmap <C-e> :NERDTreeTabsToggle<cr>
 Plugin 'ZenCoding.vim'
 Plugin 'taglist.vim'
 	nmap <C-y> :TlistToggle<cr>
