@@ -50,3 +50,20 @@ if which navi > /dev/null ; then
 	source "$(navi widget bash)"
 fi
 
+function sm {
+	local OLD_PWD=$PWD
+	local PD=$PWD;
+	while [[ "$PD" != "" ]] ;
+	do
+		#echo $PD;
+		if [[ -f "$PD/sourceme" ]] ; then
+			cd "$PD"
+			source sourceme
+			cd $OLD_PWD
+			return 0
+		else
+			PD=`echo $PD | sed 's/\/[^\/]*$//'`
+		fi
+	done
+}
+
