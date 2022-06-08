@@ -93,4 +93,5 @@ autocmd bufnewfile *.sh call HeaderShell()
 
 source ~/.vim_abbr_inc
 
-set pastetoggle=<C-v>
+set pastetoggle=<C-k>
+
