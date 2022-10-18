@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cd
+git clone https://github.com/Priezt/dotfiles.git .dotfiles
+cd .dotfiles
+script/bootstrap
+cd
+echo >> .bashrc
+echo 'source ~/.bashrc_inc' >> .bashrc
