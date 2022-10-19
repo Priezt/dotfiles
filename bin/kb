@@ -1,0 +1,17 @@
+#!/usr/bin/env perl
+
+@paths = split /\//, $ENV{PWD};
+while(~~@paths){
+	$path = join("/", @paths);
+	$path = "/" if $path eq '';
+	for(qw {
+		.kb
+		.knowledge
+		.notes
+	}){
+		if(-f "$path/$_"){
+			system("cat '$path/$_'");
+		}
+	}
+	pop @paths;
+}
