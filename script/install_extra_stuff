@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+mkdir -p ~/.config/ranger
+if ! [[ -f ~/.config/ranger/rc.conf ]] ; then
+	ln -s ~/.dotfiles/ranger/rc.conf ~/.config/ranger/rc.conf
+fi
+
