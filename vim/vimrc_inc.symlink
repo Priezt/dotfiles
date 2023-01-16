@@ -87,6 +87,15 @@ function HeaderShell()
 endf
 autocmd bufnewfile *.sh call HeaderShell()
 
+function HeaderVue()
+	exec "r ~/.dotfiles/vim/filetype-templates/template.vue"
+	normal ggdd
+	call search('module_name')
+	normal dw
+	normal "%Pbdehx
+endf
+autocmd bufnewfile *.vue call HeaderVue()
+
 " let g:EasyMotion_do_mapping = 0 " Disable default mappings
 " nmap s <Plug>(easymotion-s)
 " let g:EasyMotion_smartcase = 1
