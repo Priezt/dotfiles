@@ -67,3 +67,5 @@ function sm {
 	done
 }
 
+# for https://github.com/Slackadays/Clipboard , cb
+export CLIPBOARD_SILENT=1
