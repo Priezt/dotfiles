@@ -1,1 +1,6 @@
 (global-set-key (kbd "C-t") 'isearch-forward)
+(global-set-key (kbd "C-x C-t") 'save-buffer)
+
+
+
+
