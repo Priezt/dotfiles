@@ -100,7 +100,7 @@ autocmd bufnewfile *.vue call HeaderVue()
 " nmap s <Plug>(easymotion-s)
 " let g:EasyMotion_smartcase = 1
 
-source ~/.vim_abbr_inc
+" source ~/.vim_abbr_inc
 
 set pastetoggle=<C-k>
 
