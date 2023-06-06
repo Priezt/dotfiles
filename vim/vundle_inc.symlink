@@ -60,7 +60,6 @@ Plugin 'terryma/vim-expand-region'
 Plugin 'python.vim'
 Plugin 'rking/ag.vim'
 	nmap <Leader>ag :Ag<cr>
-Plugin 'easymotion/vim-easymotion'
 Plugin 'mickaobrien/vim-stackoverflow'
 	nmap <Leader>o :StackOverflow<space>
 Plugin 'terryma/vim-multiple-cursors'
@@ -92,6 +91,14 @@ Plugin 'vim-tbone'
 Plugin 'posva/vim-vue'
 Plugin 'solarnz/thrift.vim'
 Plugin 'ervandew/supertab'
+Plugin 'easymotion/vim-easymotion'
+	let g:EasyMotion_do_mapping = 0 " Disable default mappings
+	"nmap s <Plug>(easymotion-overwin-f)
+	nmap s <Plug>(easymotion-overwin-f2)
+	let g:EasyMotion_smartcase = 1
+	map <Leader>j <Plug>(easymotion-j)
+	map <Leader>k <Plug>(easymotion-k)
+
 
 call vundle#end()
 filetype plugin indent on     " required!
