@@ -106,3 +106,6 @@
 [submodule "vim/vim.symlink/bundle/vim-easymotion"]
 	path = vim/vim.symlink/bundle/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion.git
+[submodule "tmux/plugins/extrakto"]
+	path = tmux/plugins/extrakto
+	url = https://github.com/laktak/extrakto.git
