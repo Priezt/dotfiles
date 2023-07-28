@@ -78,4 +78,6 @@ bind P swap-window -t -1
 run-shell ~/.dotfiles/tmux/plugins/tmux-fpp/fpp.tmux
 set -g @fpp-key 'F'
 
+run-shell ~/.dotfiles/tmux/plugins/extrakto/extrakto.tmux
+
 bind f command-prompt "find-window '%%'"
