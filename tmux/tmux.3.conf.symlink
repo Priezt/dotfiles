@@ -80,4 +80,6 @@ set -g @fpp-key 'F'
 
 run-shell ~/.dotfiles/tmux/plugins/extrakto/extrakto.tmux
 
+#run-shell ~/.dotfiles/tmux/plugins/tmux-fingers/tmux-fingers.tmux
+
 bind f command-prompt "find-window '%%'"
