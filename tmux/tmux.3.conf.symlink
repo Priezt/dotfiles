@@ -78,8 +78,13 @@ bind P swap-window -t -1
 run-shell ~/.dotfiles/tmux/plugins/tmux-fpp/fpp.tmux
 set -g @fpp-key 'F'
 
+# need apt install fzf
 run-shell ~/.dotfiles/tmux/plugins/extrakto/extrakto.tmux
 
 #run-shell ~/.dotfiles/tmux/plugins/tmux-fingers/tmux-fingers.tmux
+
+# need ruby
+set -g @jump-key 'q'
+run-shell ~/.dotfiles/tmux/plugins/tmux-jump/tmux-jump.tmux
 
 bind f command-prompt "find-window '%%'"

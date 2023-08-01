@@ -109,3 +109,6 @@
 [submodule "tmux/plugins/extrakto"]
 	path = tmux/plugins/extrakto
 	url = https://github.com/laktak/extrakto.git
+[submodule "tmux/plugins/tmux-jump"]
+	path = tmux/plugins/tmux-jump
+	url = https://github.com/schasse/tmux-jump.git
