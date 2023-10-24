@@ -1,0 +1,5 @@
+#!/bin/sh
+
+FILE_WITH_LINE=$(ag "$@" | fzf | perl -pe 's/^([^:]+):(\d+):.*/$1 +$2/')
+echo $FILE_WITH_LINE
+vi $FILE_WITH_LINE
