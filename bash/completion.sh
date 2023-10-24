@@ -31,3 +31,5 @@ if which kubectl > /dev/null ; then
 	source <(kubectl completion bash | sed s/kubectl/k/g)
 fi
 
+source ~/.dotfiles/bash/bd_completion.sh
+

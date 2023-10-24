@@ -67,5 +67,9 @@ function sm {
 	done
 }
 
+bind -f ~/.dotfiles/bash/hotkey-binding
+
+source ~/.dotfiles/bash/bd
+
 # for https://github.com/Slackadays/Clipboard , cb
 export CLIPBOARD_SILENT=1
