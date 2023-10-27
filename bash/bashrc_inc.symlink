@@ -74,6 +74,8 @@ source ~/.dotfiles/bash/bd
 # for https://github.com/Slackadays/Clipboard , cb
 export CLIPBOARD_SILENT=1
 
-if [[ -f ~/.dotfiles/subs/autoenv/activate.sh ]] ; then
-	source ~/.dotfiles/subs/autoenv/activate.sh
+if ! [[ "$USE_AUTOENV" = '' ]] ; then
+	if [[ -f ~/.dotfiles/subs/autoenv/activate.sh ]] ; then
+		source ~/.dotfiles/subs/autoenv/activate.sh
+	fi
 fi
