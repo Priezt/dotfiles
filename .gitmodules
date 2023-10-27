@@ -115,3 +115,6 @@
 [submodule "vim/vim.symlink/bundle/vim-jsx-pretty"]
 	path = vim/vim.symlink/bundle/vim-jsx-pretty
 	url = git@github.com:MaxMEllon/vim-jsx-pretty.git
+[submodule "subs/autoenv"]
+	path = subs/autoenv
+	url = https://github.com/hyperupcall/autoenv.git
