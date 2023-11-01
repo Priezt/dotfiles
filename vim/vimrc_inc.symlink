@@ -103,4 +103,5 @@ autocmd bufnewfile *.vue call HeaderVue()
 " source ~/.vim_abbr_inc
 
 set pastetoggle=<C-k>
+set showtabline=2
 
