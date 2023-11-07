@@ -33,3 +33,6 @@ fi
 
 source ~/.dotfiles/bash/bd_completion.sh
 
+if [[ -f /snap/task/current/completion/bash/task.bash ]] ; then
+	source /snap/task/current/completion/bash/task.bash
+fi
