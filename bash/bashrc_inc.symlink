@@ -67,7 +67,14 @@ function sm {
 	done
 }
 
-bind -f ~/.dotfiles/bash/hotkey-binding
+function is_interactive_shell() {
+	# https://www.gnu.org/software/bash/manual/html_node/Is-this-Shell-Interactive_003f.html
+	[[ "$-" =~ "i" ]]
+}
+
+if is_interactive_shell; then
+	bind -f ~/.dotfiles/bash/hotkey-binding
+fi
 
 source ~/.dotfiles/bash/bd
 
