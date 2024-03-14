@@ -1,1 +1,2 @@
 "\e,": "cd ..\n"
+"\ev": " \C-u \C-a\C-k`cat ~/.vim_global_clipboard | tr '\\n' ' '`\e\C-e\C-y\C-a\C-y\ey\C-h\C-e\er \C-h"
