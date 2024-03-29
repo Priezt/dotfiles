@@ -60,11 +60,12 @@ function sm {
 			cd "$PD"
 			source sourceme
 			cd $OLD_PWD
-			return 0
+			break
 		else
 			PD=`echo $PD | sed 's/\/[^\/]*$//'`
 		fi
 	done
+	return 0
 }
 
 function is_interactive_shell() {

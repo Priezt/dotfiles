@@ -1,0 +1,18 @@
+#!/bin/bash
+
+OLD_PWD=$PWD
+PD=$PWD;
+while [[ "$PD" != "" ]] ;
+do
+	#echo $PD;
+	if [[ -f "$PD/sourceme" ]] ; then
+		cd "$PD"
+		source sourceme
+		cd $OLD_PWD
+		break
+	else
+		PD=`echo $PD | sed 's/\/[^\/]*$//'`
+	fi
+done
+
+"$@"
