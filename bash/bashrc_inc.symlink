@@ -83,11 +83,11 @@ source ~/.dotfiles/bash/bd
 # for https://github.com/Slackadays/Clipboard , cb
 export CLIPBOARD_SILENT=1
 
-if ! [[ "$USE_AUTOENV" = '' ]] ; then
-	if [[ -f ~/.dotfiles/subs/autoenv/activate.sh ]] ; then
-		source ~/.dotfiles/subs/autoenv/activate.sh
-	fi
-fi
+#if ! [[ "$USE_AUTOENV" = '' ]] ; then
+#	if [[ -f ~/.dotfiles/subs/autoenv/activate.sh ]] ; then
+#		source ~/.dotfiles/subs/autoenv/activate.sh
+#	fi
+#fi
 
 if which bat > /dev/null 2>&1 ; then
 	export MANPAGER="sh -c 'col -bx | bat -l man -p'"
