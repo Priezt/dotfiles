@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if ! [[ -d $HOME/ansible ]] ; then
+	mkdir -p $HOME/ansible
+fi
+
+if ! [[ -f $HOME/ansible/hosts ]] ; then
+	touch $HOME/ansible/hosts
+fi
+
+docker run --rm -it -v $HOME/.ssh:/root/.ssh -v $HOME/ansible/hosts:/etc/ansible/hosts -v $HOME/ansible:/root/ansible alpinelinux/ansible ansible "$@"
