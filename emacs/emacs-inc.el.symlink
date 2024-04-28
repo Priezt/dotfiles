@@ -1,3 +1,6 @@
+;; in ~/.emacs.el, add following line
+;; (load-file "~/.emacs-inc.el")
+
 (global-set-key (kbd "C-t") 'isearch-forward)
 (global-set-key (kbd "C-x C-t") 'save-buffer)
 (global-set-key (kbd "C-c l") #'org-store-link)
@@ -10,5 +13,5 @@
 (scroll-bar-mode -1)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-
-
+(avy-setup-default)
+(global-set-key (kbd "M-j") 'avy-goto-char-2)
