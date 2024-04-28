@@ -4,6 +4,8 @@ set -sg escape-time 1
 
 bind r source-file ~/.tmux.conf \; display "Reloaded!"
 bind a send-prefix
+bind e send-keys C-s
+bind g send-keys C-q
 
 unbind c
 bind c new-window -c "#{pane_current_path}"
