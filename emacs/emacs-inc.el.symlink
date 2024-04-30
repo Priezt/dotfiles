@@ -15,3 +15,9 @@
 
 (avy-setup-default)
 (global-set-key (kbd "M-j") 'avy-goto-char-2)
+
+(add-to-list 'auto-mode-alist '("\\.cl\\'" . lisp-mode))
+(autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
+(add-hook 'emacs-lisp-mode-hook #'enable-paredit-mode)
+(add-hook 'lisp-mode-hook #'enable-paredit-mode)
+(add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
