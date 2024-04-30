@@ -13,8 +13,10 @@
 (scroll-bar-mode -1)
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(avy-setup-default)
-(global-set-key (kbd "M-j") 'avy-goto-char-2)
+(if (package-installed-p 'avy)
+  (progn
+	(avy-setup-default)
+	(global-set-key (kbd "M-j") 'avy-goto-char-2)))
 
 (add-to-list 'auto-mode-alist '("\\.cl\\'" . lisp-mode))
 (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
