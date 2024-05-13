@@ -1,6 +1,19 @@
 ;; in ~/.emacs.el, add following line
 ;; (load-file "~/.emacs-inc.el")
 
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(package-initialize)
+
+
+(dolist (package-name '(
+		paredit
+	))
+	(unless (package-installed-p package-name)
+	  (package-refresh-contents)
+	  (package-install package-name))
+	(require package-name))
+
 (global-set-key (kbd "C-t") 'isearch-forward)
 (define-key isearch-mode-map (kbd "C-t") 'isearch-repeat-forward)
 (global-set-key (kbd "C-x C-t") 'save-buffer)
