@@ -9,6 +9,8 @@ hi TabLineFill ctermfg=LightGreen ctermbg=DarkGreen
 hi TabLine ctermfg=Blue ctermbg=DarkGreen
 hi TabLineSel ctermfg=Yellow ctermbg=Blue
 
+nnoremap <C-z> <Nop>
+
 set tags=tags;
 set autochdir
 
@@ -105,4 +107,5 @@ autocmd bufnewfile *.vue call HeaderVue()
 
 set pastetoggle=<C-k>
 set showtabline=2
+
 
