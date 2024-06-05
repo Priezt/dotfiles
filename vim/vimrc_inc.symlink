@@ -10,6 +10,7 @@ hi TabLine ctermfg=Blue ctermbg=DarkGreen
 hi TabLineSel ctermfg=Yellow ctermbg=Blue
 
 nnoremap <C-z> <Nop>
+inoremap <C-z> <Nop>
 
 set tags=tags;
 set autochdir
