@@ -9,8 +9,9 @@ hi TabLineFill ctermfg=LightGreen ctermbg=DarkGreen
 hi TabLine ctermfg=Blue ctermbg=DarkGreen
 hi TabLineSel ctermfg=Yellow ctermbg=Blue
 
-nnoremap <C-z> <Nop>
-inoremap <C-z> <Nop>
+"nnoremap <C-z> <Nop>
+"inoremap <C-z> <Nop>
+noremap <C-z> <Nop>
 
 set tags=tags;
 set autochdir
