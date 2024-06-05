@@ -115,3 +115,6 @@
 [submodule "subs/autoenv"]
 	path = subs/autoenv
 	url = https://github.com/hyperupcall/autoenv.git
+[submodule "vim/vim.symlink/bundle/emmet-vim"]
+	path = vim/vim.symlink/bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git

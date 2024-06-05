@@ -98,6 +98,8 @@ Plugin 'easymotion/vim-easymotion'
 	let g:EasyMotion_smartcase = 1
 	map <Leader>j <Plug>(easymotion-j)
 	map <Leader>k <Plug>(easymotion-k)
+Plugin 'emmet-vim'
+	let g:user_emmet_leader_key='<C-Z>'
 
 
 call vundle#end()
