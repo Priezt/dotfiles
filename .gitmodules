@@ -118,3 +118,6 @@
 [submodule "vim/vim.symlink/bundle/emmet-vim"]
 	path = vim/vim.symlink/bundle/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
+[submodule "vim/vim.symlink/bundle/vim-visual-multi"]
+	path = vim/vim.symlink/bundle/vim-visual-multi
+	url = https://github.com/mg979/vim-visual-multi.git

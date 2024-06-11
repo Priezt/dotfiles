@@ -100,6 +100,9 @@ Plugin 'easymotion/vim-easymotion'
 	map <Leader>k <Plug>(easymotion-k)
 Plugin 'emmet-vim'
 	let g:user_emmet_leader_key='<C-Z>'
+if v:version >= 800
+	Plugin 'vim-visual-multi'
+endif
 
 
 call vundle#end()
