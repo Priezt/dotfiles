@@ -8,6 +8,7 @@
 
 (dolist (package-name '(
 		paredit
+		restclient
 	))
 	(unless (package-installed-p package-name)
 	  (package-refresh-contents)
