@@ -104,6 +104,7 @@ if v:version >= 800
 	Plugin 'vim-visual-multi'
 endif
 "Plugin 'ctrlsf'
+"Plugin 'LeaderF'
 
 
 call vundle#end()
