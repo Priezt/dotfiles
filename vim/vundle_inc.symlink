@@ -103,6 +103,7 @@ Plugin 'emmet-vim'
 if v:version >= 800
 	Plugin 'vim-visual-multi'
 endif
+"Plugin 'ctrlsf'
 
 
 call vundle#end()

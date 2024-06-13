@@ -121,3 +121,6 @@
 [submodule "vim/vim.symlink/bundle/vim-visual-multi"]
 	path = vim/vim.symlink/bundle/vim-visual-multi
 	url = https://github.com/mg979/vim-visual-multi.git
+[submodule "vim/vim.symlink/bundle/ctrlsf"]
+	path = vim/vim.symlink/bundle/ctrlsf
+	url = https://github.com/dyng/ctrlsf.vim.git
