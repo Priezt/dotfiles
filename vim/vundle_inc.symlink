@@ -6,6 +6,14 @@ filetype off                   " required!
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+function! GetAllBufferContents()
+    let buflist = []
+    for buf in getbufinfo({'buflisted':1})
+        call add(buflist, join(getbufline(buf.bufnr, 1, '$'), "\n"))
+    endfor
+    return join(buflist, "\n\n")
+endfunction
+
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'comments.vim'
@@ -87,9 +95,8 @@ Plugin 'junegunn/fzf.vim'
 	nmap <Leader>* :Ag <C-r><C-w><cr>
 	nmap <Leader>t :Tags<cr>
 	nmap <Leader>f :Files<cr>
-	"inoremap <expr> <C-w> fzf#vim#complete({'source': uniq(sort(split(join(getline(1,'$'), "\n"), '\W\+'))), 'window': {'width': 0.3, 'height': 0.3, 'xoffset': 1}})
-	" still don't know how to configure window size
-	inoremap <expr> <C-w> fzf#vim#complete({'source': uniq(sort(split(join(getline(1,'$'), "\n"), '\W\+')))})
+	inoremap <expr> <C-w> fzf#vim#complete({'source': uniq(sort(split(GetAllBufferContents(), '\W\+'))), 'right': '40%'})
+	" still don't know how to keep insert mode after selection
 Plugin 'airblade/vim-gitgutter'
 	let g:gitgutter_enabled = 0
 Plugin 'godlygeek/tabular'
