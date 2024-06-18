@@ -79,6 +79,17 @@ Plugin 'vimwiki'
 " 	let g:syntastic_check_on_wq = 0
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+	let g:fzf_layout = { 'down': '~40%' }
+	nmap <Leader>l :Lines<cr>
+	nmap <Leader>c :Commands<cr>
+	nmap <C-p> :Files<cr>
+	nmap <Leader>a :Ag<cr>
+	nmap <Leader>* :Ag <C-r><C-w><cr>
+	nmap <Leader>t :Tags<cr>
+	nmap <Leader>f :Files<cr>
+	"inoremap <expr> <C-w> fzf#vim#complete({'source': uniq(sort(split(join(getline(1,'$'), "\n"), '\W\+'))), 'window': {'width': 0.3, 'height': 0.3, 'xoffset': 1}})
+	" still don't know how to configure window size
+	inoremap <expr> <C-w> fzf#vim#complete({'source': uniq(sort(split(join(getline(1,'$'), "\n"), '\W\+')))})
 Plugin 'airblade/vim-gitgutter'
 	let g:gitgutter_enabled = 0
 Plugin 'godlygeek/tabular'

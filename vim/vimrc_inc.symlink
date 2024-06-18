@@ -31,15 +31,8 @@ nmap <Leader>n :set number!<cr>
 "nmap <Leader>c1 :colorscheme desert<cr>
 "nmap <Leader>c2 :colorscheme darkblue<cr>
 "nmap <Leader>c3 :colorscheme default<cr>
-nmap <Leader>c :Commands<cr>
-nmap <Leader>l :Lines<cr>
 nmap <Leader>L :set list!<cr>
-nmap <Leader>t :Tags<cr>
-nmap <Leader>f :Files<cr>
 nmap <Leader>x :!chmod +x %<cr>
-nmap <C-p> :Files<cr>
-nmap <Leader>a :Ag<cr>
-nmap <Leader>* :Ag <C-r><C-w><cr>
 nmap <Leader>G :GitGutterToggle<cr>
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
