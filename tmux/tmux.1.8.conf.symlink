@@ -65,6 +65,7 @@ bind C-e select-pane -R \; send-keys C-c C-p C-m \; select-pane -L
 
 unbind `
 bind ` copy-mode \; send-keys k 0 space '$' h C-m \; paste-buffer
+bind t copy-mode \; send-keys k 0 space '$' h C-m \; display-message "Copied: #(tmux show-buffer)"
 
 set-window-option -g pane-base-index 1
 
