@@ -22,6 +22,14 @@
 (global-set-key (kbd "C-c a") #'org-agenda)
 (global-set-key (kbd "C-c c") #'org-capture)
 
+(if (package-installed-p 'helm)
+    (progn
+      (require 'helm)
+      (helm-mode 1)
+      (global-set-key (kbd "M-x") 'helm-M-x)
+      (global-set-key (kbd "C-x C-f") 'helm-find-files)
+      (global-set-key (kbd "C-x C-b") 'helm-buffers-list)))
+
 ;;(setq inhibit-startup-message t)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
