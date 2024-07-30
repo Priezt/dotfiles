@@ -9,6 +9,7 @@
 (dolist (package-name '(
 		paredit
 		restclient
+		helpful
 	))
 	(unless (package-installed-p package-name)
 	  (package-refresh-contents)
@@ -36,6 +37,14 @@
       (global-set-key (kbd "C-x C-f") 'helm-find-files)
       (global-set-key (kbd "C-x C-b") 'helm-buffers-list)))
 
+(if (package-installed-p 'helpful)
+    (progn
+      (require 'helpful)
+      (global-set-key (kbd "C-h f") 'helpful-callable)
+      (global-set-key (kbd "C-h v") 'helpful-variable)
+      (global-set-key (kbd "C-h k") 'helpful-key)
+      (global-set-key (kbd "C-h x") 'helpful-command)))
+
 ;;(setq inhibit-startup-message t)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
@@ -48,6 +57,7 @@
 	(global-set-key (kbd "M-j") 'avy-goto-char-2)))
 
 (add-to-list 'auto-mode-alist '("\\.cl\\'" . lisp-mode))
+(add-to-list 'auto-mode-alist '("\\.el\\'" . lisp-mode))
 (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
 (add-hook 'emacs-lisp-mode-hook #'enable-paredit-mode)
 (add-hook 'lisp-mode-hook #'enable-paredit-mode)
