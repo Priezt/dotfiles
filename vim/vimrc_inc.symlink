@@ -106,5 +106,5 @@ set pastetoggle=<C-k>
 set showtabline=2
 
 " nmap <Leader><Leader>p V,y:below new \| execute 'r !/root/ai-tools/bin/answer-vim-clipboard ; cat /tmp/perplexity_answer' \| 1d_<cr>
-nmap <Leader><Leader>p V,y:call system("/root/ai-tools/bin/answer-vim-clipboard")<cr>:below sp /tmp/perplexity_answer<cr>
+nmap <Leader><Leader>p V,y:call system("/root/ai-tools/bin/answer-vim-clipboard")<cr>:below sp /tmp/perplexity_answer.md<cr>
 
