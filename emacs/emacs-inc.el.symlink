@@ -11,6 +11,7 @@
 		restclient
 		helpful
 		ace-window
+		markdown-mode
 	))
 	(unless (package-installed-p package-name)
 	  (package-refresh-contents)
