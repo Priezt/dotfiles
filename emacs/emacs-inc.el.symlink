@@ -12,6 +12,7 @@
 		helpful
 		ace-window
 		markdown-mode
+		hy-mode
 	))
 	(unless (package-installed-p package-name)
 	  (package-refresh-contents)
@@ -74,8 +75,10 @@
 ;; modes
 (add-to-list 'auto-mode-alist '("\\.cl\\'" . lisp-mode))
 (add-to-list 'auto-mode-alist '("\\.el\\'" . lisp-mode))
+(add-to-list 'auto-mode-alist '("\\.hy\\'" . hy-mode))
 (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
 (add-hook 'emacs-lisp-mode-hook #'enable-paredit-mode)
 (add-hook 'lisp-mode-hook #'enable-paredit-mode)
 (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
+(add-hook 'hy-mode-hook #'enable-paredit-mode)
 (add-to-list 'auto-mode-alist '("\\.http\\'" . restclient-mode))
