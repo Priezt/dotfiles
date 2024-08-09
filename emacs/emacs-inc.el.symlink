@@ -29,6 +29,8 @@
 (global-set-key (kbd "C-t") 'isearch-forward)
 (define-key isearch-mode-map (kbd "C-t") 'isearch-repeat-forward)
 (global-set-key (kbd "C-x C-t") 'save-buffer)
+(set-face-background 'mode-line "black")
+(set-face-foreground 'mode-line "yellow")
 
 ;; org-mode
 (global-set-key (kbd "C-c l") #'org-store-link)
