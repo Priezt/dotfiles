@@ -108,3 +108,5 @@ set showtabline=2
 " nmap <Leader><Leader>p V,y:below new \| execute 'r !/root/ai-tools/bin/answer-vim-clipboard ; cat /tmp/perplexity_answer' \| 1d_<cr>
 nmap <Leader><Leader>p V,y:call system("/root/ai-tools/bin/answer-vim-clipboard")<cr>:below sp /tmp/perplexity_answer.md<cr>
 
+nmap <Leader>_ V!perl -pe 's/([A-Z])/"_".lc($1)/ge; s/\b_//g;'<cr>
+nmap <Leader>^ V!perl -pe 's/_([a-z])/uc($1)/ge; s/\b([a-z])/uc($1)/ge;'<cr>
