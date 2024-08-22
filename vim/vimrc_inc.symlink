@@ -36,7 +36,12 @@ nmap <Leader>x :!chmod +x %<cr>
 nmap <Leader>G :GitGutterToggle<cr>
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
-vmap <Leader>T y:!echo -n <C-r>" \| tmux load-buffer -<cr><cr>:echomsg "Saved to tmux buffer"<cr>
+
+function CopyRegistryToTmuxBuffer()
+	execute '!echo -n '.shellescape(getreg('"'))." | tmux load-buffer -"
+endf
+vmap <Leader>T y:call CopyRegistryToTmuxBuffer()<cr><cr>:echomsg "Saved to tmux buffer"<cr>
+"vmap <Leader>T y:!echo -n <C-r>" \| tmux load-buffer -<cr><cr>:echomsg "Saved to tmux buffer"<cr>
 
 " imap <C-j> <esc>yypp$^c$}<esc>kkA{<esc>j>>$^c$
 " imap <C-k> <esc>yypp$^c$end<esc>kkA<space>do<esc>j>>$^c$
