@@ -74,6 +74,10 @@
       (avy-setup-default)
       (global-set-key (kbd "M-j") 'avy-goto-char-2)))
 
+;; paredit
+(define-key paredit-mode-map (kbd "{") 'paredit-open-curly)
+(define-key paredit-mode-map (kbd "}") 'paredit-close-curly)
+
 ;; modes
 (add-to-list 'auto-mode-alist '("\\.cl\\'" . lisp-mode))
 (add-to-list 'auto-mode-alist '("\\.el\\'" . lisp-mode))
