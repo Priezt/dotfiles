@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -f ~/.dotfiles/subs/fzf/bin/*
+cd ~/.dotfiles/subs/fzf && ./install
