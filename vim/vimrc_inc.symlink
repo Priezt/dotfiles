@@ -120,17 +120,20 @@ python << EOF
 import vim
 import os
 import time
+import re
 def call_code_snippet():
 	output = os.popen(os.path.expanduser("~/code-snippets/bin/cs-for-vim") + " " + vim.eval('expand("%:p")')).read().rstrip()
 	parts = output.split(":")
-	filename = parts[0]
-	line_number = parts[1]
 	#time.sleep(1)
 	vim.command("redraw!")
-	vim.command("split")
-	vim.command("wincmd w")
-	vim.command("edit %s" % filename)
-	#print("edit <%s>" % filename)
-	vim.command(line_number)
+	if len(parts) == 2:
+		filename = parts[0]
+		line_number = parts[1]
+		if re.search(r'^\d+$', line_number):
+			vim.command("split")
+			vim.command("wincmd w")
+			vim.command("edit %s" % filename)
+			#print("edit <%s>" % filename)
+			vim.command(line_number)
 EOF
 nmap <Leader><Leader>cs :python call_code_snippet()<cr>
