@@ -90,3 +90,25 @@
 (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
 (add-hook 'hy-mode-hook #'enable-paredit-mode)
 (add-to-list 'auto-mode-alist '("\\.http\\'" . restclient-mode))
+
+;; code-snippets
+(defun call-cs ()
+  "Call code-snippet"
+  (interactive)
+  (setq output
+	(replace-regexp-in-string
+	 "[\r\n]+" ""
+	 (shell-command-to-string
+	  (concat
+	   "/root/code-snippets/bin/cs-for-emacs "
+	   (buffer-file-name)))))
+  (if (string-match "code-snippets.*:[0-9]+" output)
+      (progn
+	(setq parts (split-string output ":"))
+	(setq file (car parts))
+	(setq line (cadr parts))
+	(let ((new-window (split-window-below)))
+	  (select-window new-window)
+	  (find-file file)
+	  (goto-line (string-to-number line))))))
+(global-set-key (kbd "C-c s") 'call-cs)
