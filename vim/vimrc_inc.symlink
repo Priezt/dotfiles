@@ -116,6 +116,7 @@ nmap <Leader><Leader>p V,y:call system("/root/ai-tools/bin/answer-vim-clipboard"
 nmap <Leader>_ V!perl -pe 's/([A-Z])/"_".lc($1)/ge; s/\b_//g;'<cr>
 nmap <Leader>^ V!perl -pe 's/_([a-z])/uc($1)/ge; s/\b([a-z])/uc($1)/ge;'<cr>
 
+if has('python')
 python << EOF
 import vim
 import os
@@ -137,3 +138,4 @@ def call_code_snippet():
 			vim.command(line_number)
 EOF
 nmap <Leader><Leader>cs :python call_code_snippet()<cr>
+endif
