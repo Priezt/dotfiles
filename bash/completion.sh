@@ -45,3 +45,12 @@ _fzf_complete_supervisorctl(){
 	)
 }
 complete -F _fzf_complete_supervisorctl -o default -o bashdefault supervisorctl
+
+# pm2
+_fzf_complete_pm2(){
+	_fzf_complete "--multi --reverse" "$@" < <(
+		pm2 jlist | jq -r '.[] | .name'
+	)
+}
+complete -F _fzf_complete_pm2 -o default -o bashdefault pm2
+
