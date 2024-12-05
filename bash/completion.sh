@@ -36,3 +36,12 @@ source ~/.dotfiles/bash/bd_completion.sh
 if [[ -f /snap/task/current/completion/bash/task.bash ]] ; then
 	source /snap/task/current/completion/bash/task.bash
 fi
+
+
+# supervisorctl
+_fzf_complete_supervisorctl(){
+	_fzf_complete "--multi --reverse" "$@" < <(
+		supervisorctl status | awk '{print $1}'
+	)
+}
+complete -F _fzf_complete_supervisorctl -o default -o bashdefault supervisorctl
