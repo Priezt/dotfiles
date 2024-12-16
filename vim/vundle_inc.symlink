@@ -104,6 +104,7 @@ Plugin 'plasticboy/vim-markdown'
 	let g:vim_markdown_folding_disabled = 1
 Plugin 'tpope/vim-db'
 Plugin 'vim-peekaboo'
+	let g:peekaboo_window = "vertical botright 20new"
 Plugin 'vim-tbone'
 "Plugin 'davidhalter/jedi-vim'
 Plugin 'posva/vim-vue'

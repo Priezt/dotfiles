@@ -36,7 +36,12 @@ nmap <Leader>x :!chmod +x %<cr>
 nmap <Leader>G :GitGutterToggle<cr>
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
-vmap <Leader>T y:!echo -n <C-r>" \| tmux load-buffer -<cr><cr>:echomsg "Saved to tmux buffer"<cr>
+
+function CopyRegistryToTmuxBuffer()
+	execute '!echo -n '.shellescape(getreg('"'))." | tmux load-buffer -"
+endf
+vmap <Leader>T y:call CopyRegistryToTmuxBuffer()<cr><cr>:echomsg "Saved to tmux buffer"<cr>
+"vmap <Leader>T y:!echo -n <C-r>" \| tmux load-buffer -<cr><cr>:echomsg "Saved to tmux buffer"<cr>
 
 " imap <C-j> <esc>yypp$^c$}<esc>kkA{<esc>j>>$^c$
 " imap <C-k> <esc>yypp$^c$end<esc>kkA<space>do<esc>j>>$^c$
@@ -108,3 +113,29 @@ set showtabline=2
 " nmap <Leader><Leader>p V,y:below new \| execute 'r !/root/ai-tools/bin/answer-vim-clipboard ; cat /tmp/perplexity_answer' \| 1d_<cr>
 nmap <Leader><Leader>p V,y:call system("/root/ai-tools/bin/answer-vim-clipboard")<cr>:below sp /tmp/perplexity_answer.md<cr>
 
+nmap <Leader>_ V!perl -pe 's/([A-Z])/"_".lc($1)/ge; s/\b_//g;'<cr>
+nmap <Leader>^ V!perl -pe 's/_([a-z])/uc($1)/ge; s/\b([a-z])/uc($1)/ge;'<cr>
+
+if has('python')
+python << EOF
+import vim
+import os
+import time
+import re
+def call_code_snippet():
+	output = os.popen(os.path.expanduser("~/code-snippets/bin/cs-for-vim") + " " + vim.eval('expand("%:p")')).read().rstrip()
+	parts = output.split(":")
+	#time.sleep(1)
+	vim.command("redraw!")
+	if len(parts) == 2:
+		filename = parts[0]
+		line_number = parts[1]
+		if re.search(r'^\d+$', line_number):
+			vim.command("split")
+			vim.command("wincmd w")
+			vim.command("edit %s" % filename)
+			#print("edit <%s>" % filename)
+			vim.command(line_number)
+EOF
+nmap <Leader><Leader>cs :python call_code_snippet()<cr>
+endif

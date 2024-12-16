@@ -1,0 +1,13 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  bootstrap:
+    desc: link dotfiles to home directory
+    cmds:
+      - script/bootstrap
+  upgrade-fzf:
+    desc: ...
+    cmds:
+      - bin/upgrade-fzf

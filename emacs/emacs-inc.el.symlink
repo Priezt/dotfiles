@@ -1,6 +1,10 @@
 ;; in ~/.emacs.el, add following line
 ;; (load-file "~/.emacs-inc.el")
 
+(set-language-environment 'UTF-8)
+(set-default-coding-systems 'utf-8)
+(prefer-coding-system 'utf-8)
+
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
@@ -12,6 +16,7 @@
 		helpful
 		ace-window
 		markdown-mode
+		hy-mode
 	))
 	(unless (package-installed-p package-name)
 	  (package-refresh-contents)
@@ -28,6 +33,10 @@
 (global-set-key (kbd "C-t") 'isearch-forward)
 (define-key isearch-mode-map (kbd "C-t") 'isearch-repeat-forward)
 (global-set-key (kbd "C-x C-t") 'save-buffer)
+(set-face-background 'mode-line "black")
+(set-face-foreground 'mode-line "yellow")
+(global-unset-key (kbd "M-\\"))
+(global-set-key (kbd "M-\\") 'just-one-space)
 
 ;; org-mode
 (global-set-key (kbd "C-c l") #'org-store-link)
@@ -71,11 +80,39 @@
       (avy-setup-default)
       (global-set-key (kbd "M-j") 'avy-goto-char-2)))
 
+;; paredit
+(define-key paredit-mode-map (kbd "{") 'paredit-open-curly)
+(define-key paredit-mode-map (kbd "}") 'paredit-close-curly)
+
 ;; modes
 (add-to-list 'auto-mode-alist '("\\.cl\\'" . lisp-mode))
 (add-to-list 'auto-mode-alist '("\\.el\\'" . lisp-mode))
+(add-to-list 'auto-mode-alist '("\\.hy\\'" . hy-mode))
 (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
 (add-hook 'emacs-lisp-mode-hook #'enable-paredit-mode)
 (add-hook 'lisp-mode-hook #'enable-paredit-mode)
 (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
+(add-hook 'hy-mode-hook #'enable-paredit-mode)
 (add-to-list 'auto-mode-alist '("\\.http\\'" . restclient-mode))
+
+;; code-snippets
+(defun call-cs ()
+  "Call code-snippet"
+  (interactive)
+  (setq output
+	(replace-regexp-in-string
+	 "[\r\n]+" ""
+	 (shell-command-to-string
+	  (concat
+	   "/root/code-snippets/bin/cs-for-emacs "
+	   (buffer-file-name)))))
+  (if (string-match "code-snippets.*:[0-9]+" output)
+      (progn
+	(setq parts (split-string output ":"))
+	(setq file (car parts))
+	(setq line (cadr parts))
+	(let ((new-window (split-window-below)))
+	  (select-window new-window)
+	  (find-file file)
+	  (goto-line (string-to-number line))))))
+(global-set-key (kbd "C-c s") 'call-cs)

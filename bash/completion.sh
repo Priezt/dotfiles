@@ -36,3 +36,21 @@ source ~/.dotfiles/bash/bd_completion.sh
 if [[ -f /snap/task/current/completion/bash/task.bash ]] ; then
 	source /snap/task/current/completion/bash/task.bash
 fi
+
+
+# supervisorctl
+_fzf_complete_supervisorctl(){
+	_fzf_complete "--multi --reverse" "$@" < <(
+		supervisorctl status | awk '{print $1}'
+	)
+}
+complete -F _fzf_complete_supervisorctl -o default -o bashdefault supervisorctl
+
+# pm2
+_fzf_complete_pm2(){
+	_fzf_complete "--multi --reverse" "$@" < <(
+		pm2 jlist | jq -r '.[] | .name'
+	)
+}
+complete -F _fzf_complete_pm2 -o default -o bashdefault pm2
+
