@@ -127,3 +127,6 @@
 [submodule "vim/vim.symlink/bundle/LeaderF"]
 	path = vim/vim.symlink/bundle/LeaderF
 	url = https://github.com/Yggdroot/LeaderF.git
+[submodule "subs/gah"]
+	path = subs/gah
+	url = https://github.com/marverix/gah.git
