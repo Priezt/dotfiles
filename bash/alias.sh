@@ -31,3 +31,5 @@ alias dive='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wag
 
 alias tmd='tmux attach || tmux new'
 alias emacs='emacs -nw'
+
+alias pc=proxychains
