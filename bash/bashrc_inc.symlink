@@ -12,7 +12,6 @@ export PATH=../../../../node_modules/.bin:$PATH
 export PATH=../../../node_modules/.bin:$PATH
 export PATH=../../node_modules/.bin:$PATH
 export PATH=../node_modules/.bin:$PATH
-export PATH=./node_modules/.bin:$PATH
 export PATH=~/.local/bin:$PATH
 
 #export HTTP_CLIENT="wget --no-check-certificate -O"
@@ -93,3 +92,4 @@ if which bat > /dev/null 2>&1 ; then
 	export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 fi
 
+export FZF_DEFAULT_COMMAND='ag -g ""'
