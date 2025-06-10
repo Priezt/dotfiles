@@ -45,6 +45,7 @@ _fzf_complete_supervisorctl(){
 	)
 }
 complete -F _fzf_complete_supervisorctl -o default -o bashdefault supervisorctl
+complete -F _fzf_complete_supervisorctl -o default -o bashdefault sv
 
 # pm2
 _fzf_complete_pm2(){

@@ -33,3 +33,5 @@ alias tmd='tmux attach || tmux new'
 alias emacs='emacs -nw'
 
 alias pc=proxychains
+alias howdoi="pc uv tool run --python 3.12 howdoi -c"
+alias sv=supervisorctl
