@@ -1,0 +1,3 @@
+#!/bin/bash
+
+uv tool run --python 3.12 gita "$@"
