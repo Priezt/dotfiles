@@ -85,3 +85,6 @@ set -g @fpp-key 'F'
 run-shell ~/.dotfiles/tmux/plugins/extrakto/extrakto.tmux
 
 bind f command-prompt "find-window '%%'"
+
+unbind v
+bind v copy-mode \; send-keys '$' v C-b C-b C-b y \; run-shell "~/.dotfiles/tmux/tools/open-file-for-ctrl-v.pl" \; paste-buffer
