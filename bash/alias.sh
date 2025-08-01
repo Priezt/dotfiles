@@ -35,3 +35,4 @@ alias emacs='emacs -nw'
 alias pc=proxychains
 alias howdoi="pc uv tool run --python 3.12 howdoi -c"
 alias sv=supervisorctl
+alias tldr="pc uv tool run tldr tar"
