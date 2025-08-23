@@ -2,6 +2,11 @@
 
 mkdir -p ~/.config/ranger
 if ! [[ -f ~/.config/ranger/rc.conf ]] ; then
+	mkdir -p ~/.config/ranger
 	ln -s ~/.dotfiles/ranger/rc.conf ~/.config/ranger/rc.conf
 fi
 
+if ! [[ -f ~/.config/zellij/config.kdl ]] ; then
+	mkdir -p ~/.config/zellij
+	ln -s ~/.dotfiles/zellij/config.kdl ~/.config/zellij/config.kdl
+fi

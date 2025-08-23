@@ -55,3 +55,11 @@ _fzf_complete_pm2(){
 }
 complete -F _fzf_complete_pm2 -o default -o bashdefault pm2
 
+# zl
+_fzf_complete_zl(){
+	_fzf_complete "--multi --reverse" "$@" < <(
+		find ~/.zellij-layouts/ -name '*.kdl'
+	)
+}
+complete -F _fzf_complete_zl -o default -o bashdefault zl
+
