@@ -2,6 +2,8 @@ set -g prefix C-a
 unbind C-b
 set -sg escape-time 1
 
+set -g default-terminal "tmux-256color"
+
 bind r source-file ~/.tmux.conf \; display "Reloaded!"
 bind a send-prefix
 bind e send-keys C-s
