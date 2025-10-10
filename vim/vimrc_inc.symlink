@@ -3,7 +3,8 @@ set autoindent
 set encoding=utf-8
 set tabstop=4
 set shiftwidth=4
-colorscheme desert
+"colorscheme desert
+colorscheme morning
 
 hi TabLineFill ctermfg=LightGreen ctermbg=DarkGreen
 hi TabLine ctermfg=Blue ctermbg=DarkGreen
