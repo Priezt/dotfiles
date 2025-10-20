@@ -4,7 +4,11 @@ set encoding=utf-8
 set tabstop=4
 set shiftwidth=4
 "colorscheme desert
-colorscheme morning
+if filereadable(expand('~/.vim/colors/PaperColor.vim'))
+	colorscheme PaperColor
+else
+	colorscheme morning
+endif
 
 hi TabLineFill ctermfg=LightGreen ctermbg=DarkGreen
 hi TabLine ctermfg=Blue ctermbg=DarkGreen
