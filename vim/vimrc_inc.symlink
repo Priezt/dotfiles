@@ -145,6 +145,6 @@ EOF
 nmap <Leader><Leader>cs :python call_code_snippet()<cr>
 endif
 
-nmap csd :colorscheme desert<cr>
-nmap csl :colorscheme morning<cr>
+"nmap csd :colorscheme desert<cr>
+"nmap csl :colorscheme morning<cr>
 
