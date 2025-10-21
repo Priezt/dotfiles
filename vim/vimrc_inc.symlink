@@ -10,9 +10,9 @@ else
 	colorscheme morning
 endif
 
-hi TabLineFill ctermfg=LightGreen ctermbg=DarkGreen
-hi TabLine ctermfg=Blue ctermbg=DarkGreen
-hi TabLineSel ctermfg=Yellow ctermbg=Blue
+"hi TabLineFill ctermfg=LightGreen ctermbg=DarkGreen
+"hi TabLine ctermfg=Blue ctermbg=DarkGreen
+"hi TabLineSel ctermfg=Yellow ctermbg=Blue
 
 "nnoremap <C-z> <Nop>
 "inoremap <C-z> <Nop>
