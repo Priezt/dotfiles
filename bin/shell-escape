@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+
+import os
+import shlex
+
+temp_filename = os.popen("mktemp").read().rstrip()
+
+os.system("tmux split-window -v 'vi %s; tmux wait-for -S shell_escape_done'" % temp_filename)
+
+os.system("tmux wait-for shell_escape_done")
+
+with open(temp_filename, "r") as f:
+    content = f.read().strip()
+
+escaped_content = shlex.quote(content)
+#print(escaped_content)
+
+with os.popen("tmux load-buffer -", "w") as f:
+    f.write(escaped_content)
+
+os.system("tmux paste-buffer")

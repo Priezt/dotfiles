@@ -93,3 +93,10 @@ if which bat > /dev/null 2>&1 ; then
 fi
 
 export FZF_DEFAULT_COMMAND='ag -g ""'
+
+if which zoxide > /dev/null 2>&1 ; then
+	eval "$(zoxide init bash)"
+fi
+
+bind -x '"\ei":"shell-escape"'
+
