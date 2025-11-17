@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker run -e TZ=Asia/Shanghai --rm -it poetaman/arttime:latest
