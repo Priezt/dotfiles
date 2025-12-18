@@ -104,3 +104,5 @@ bind M-q send-keys C-q
 bind M-s send-keys C-s
 bind M-a send-keys C-a
 bind M-3 send-keys C-3
+
+bind I join-pane
