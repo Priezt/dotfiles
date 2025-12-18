@@ -91,9 +91,10 @@ run-shell ~/.dotfiles/tmux/plugins/extrakto/extrakto.tmux
 
 #run-shell ~/.dotfiles/tmux/plugins/tmux-fingers/tmux-fingers.tmux
 
-# need ruby
-set -g @jump-key 'q'
-run-shell ~/.dotfiles/tmux/plugins/tmux-jump/tmux-jump.tmux
+# this shit is not that useful
+## need ruby
+#set -g @jump-key 'q'
+#run-shell ~/.dotfiles/tmux/plugins/tmux-jump/tmux-jump.tmux
 
 bind f command-prompt "find-window '%%'"
 
