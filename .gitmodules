@@ -130,3 +130,6 @@
 [submodule "subs/gah"]
 	path = subs/gah
 	url = https://github.com/marverix/gah.git
+[submodule "vim/vim.symlink/bundle/rust.vim"]
+	path = vim/vim.symlink/bundle/rust.vim
+	url = https://github.com/rust-lang/rust.vim
