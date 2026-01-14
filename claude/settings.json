@@ -5,6 +5,7 @@
       "Write",
       "Bash(git status)",
       "Bash(grep:*)",
+      "Bash(sed:*)",
       "Bash(ls:*)",
       "Bash(cargo:*)"
     ]
