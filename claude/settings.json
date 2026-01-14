@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allowedTools": [
+      "Read",
+      "Write",
+      "Bash(git status)",
+      "Bash(grep:*)",
+      "Bash(ls:*)",
+      "Bash(cargo:*)"
+    ]
+  },
+  "enabledPlugins": {
+    "rust-analyzer-lsp@claude-plugins-official": true
+  }
+}

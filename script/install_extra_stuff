@@ -10,3 +10,13 @@ if ! [[ -f ~/.config/zellij/config.kdl ]] ; then
 	mkdir -p ~/.config/zellij
 	ln -s ~/.dotfiles/zellij/config.kdl ~/.config/zellij/config.kdl
 fi
+
+mkdir -p ~/.claude
+if ! [[ -f ~/.claude/settings.json ]] ; then
+	ln -s ~/.dotfiles/claude/settings.json ~/.claude/settings.json
+fi
+
+mkdir -p ~/.claude-minimax
+if ! [[ -f ~/.claude-minimax/settings.json ]] ; then
+	ln -s ~/.dotfiles/claude-minimax/settings.json ~/.claude-minimax/settings.json
+fi
