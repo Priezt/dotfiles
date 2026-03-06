@@ -7,10 +7,25 @@
       "Bash(grep:*)",
       "Bash(sed:*)",
       "Bash(ls:*)",
+      "Bash(uv:*)",
+      "Bash(python:*)",
       "Bash(cargo:*)"
     ]
   },
   "enabledPlugins": {
     "rust-analyzer-lsp@claude-plugins-official": true
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq .message | cc-alert"
+          }
+        ]
+      }
+    ]
   }
 }

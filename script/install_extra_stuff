@@ -12,7 +12,7 @@ if ! [[ -f ~/.config/zellij/config.kdl ]] ; then
 fi
 
 mkdir -p ~/.claude-minimax
-CLAUDE_CONFIG_FILES="settings.json CLAUDE.md"
+CLAUDE_CONFIG_FILES="settings.json CLAUDE.md commands"
 for f in $CLAUDE_CONFIG_FILES ; do
 	if ! [[ -f ~/.claude-minimax/$f ]] ; then
 		ln -s ~/.dotfiles/claude/$f ~/.claude-minimax/$f
