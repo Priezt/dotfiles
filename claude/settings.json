@@ -3,13 +3,7 @@
     "allowedTools": [
       "Read",
       "Write",
-      "Bash(git status)",
-      "Bash(grep:*)",
-      "Bash(sed:*)",
-      "Bash(ls:*)",
-      "Bash(uv:*)",
-      "Bash(python:*)",
-      "Bash(cargo:*)"
+	  "Bash"
     ]
   },
   "enabledPlugins": {
