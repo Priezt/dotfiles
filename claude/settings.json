@@ -3,7 +3,8 @@
     "allow": [
       "Read",
       "Write",
-	  "Bash"
+      "Update",
+      "Bash"
     ]
   },
   "enabledPlugins": {
