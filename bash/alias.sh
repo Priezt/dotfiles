@@ -16,7 +16,7 @@ alias cd..7='cd ../../../../../../..'
 alias cd..8='cd ../../../../../../../..'
 alias cd..9='cd ../../../../../../../../..'
 alias newest='find . -type f -exec ls -1lt "{}" + | head '
-alias short='egrep -v ".{120}"'
+alias short='egrep -v ".{200}"'
 
 alias json="python -mjson.tool"
 alias gitsearch='git rev-list --all | xargs git grep -F'
