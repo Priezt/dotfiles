@@ -107,3 +107,5 @@ bind M-a send-keys C-a
 bind M-3 send-keys C-3
 
 bind I join-pane
+bind C display-popup
+
