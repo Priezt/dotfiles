@@ -10,3 +10,14 @@ if ! [[ -f ~/.config/zellij/config.kdl ]] ; then
 	mkdir -p ~/.config/zellij
 	ln -s ~/.dotfiles/zellij/config.kdl ~/.config/zellij/config.kdl
 fi
+
+mkdir -p ~/.claude-minimax
+CLAUDE_CONFIG_FILES="settings.json CLAUDE.md commands"
+for f in $CLAUDE_CONFIG_FILES ; do
+	if ! [[ -f ~/.claude-minimax/$f ]] ; then
+		ln -s ~/.dotfiles/claude/$f ~/.claude-minimax/$f
+	fi
+done
+if ! [[ -f ~/.claude-minimax/agents ]] ; then
+	ln -s ~/my-claude-agents ~/.claude-minimax/agents
+fi

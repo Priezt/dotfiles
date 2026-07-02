@@ -124,6 +124,7 @@ if v:version >= 800
 endif
 "Plugin 'ctrlsf'
 "Plugin 'LeaderF'
+Plugin 'rust.vim'
 
 
 call vundle#end()

@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Write",
+      "Update",
+      "Bash"
+    ],
+    "deny": [
+      "Websearch"
+    ]
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq .message | cc-alert"
+          }
+        ]
+      }
+    ]
+  }
+}
