@@ -109,4 +109,5 @@ bind M-3 send-keys C-3
 bind I join-pane
 
 set -g extended-keys on
+bind C display-popup -w 80% -h 80% -E
 

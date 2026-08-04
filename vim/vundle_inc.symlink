@@ -71,7 +71,7 @@ Plugin 'rking/ag.vim'
 Plugin 'mickaobrien/vim-stackoverflow'
 	nmap <Leader>o :StackOverflow<space>
 Plugin 'terryma/vim-multiple-cursors'
-	" move to a work, press 'ctrl-n' to select one by one, then press 's' to change
+	" move to a word, press 'ctrl-n' to select one by one, then press 's' to change
 Plugin 'Shougo/vimproc.vim'
 Plugin 'chemzqm/unite-git-log'
 Plugin 'vimwiki'
