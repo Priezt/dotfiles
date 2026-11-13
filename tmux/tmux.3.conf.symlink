@@ -111,3 +111,7 @@ bind I join-pane
 set -g extended-keys on
 bind C display-popup -w 80% -h 80% -E
 
+# Enable terminal overrides for OSC color queries and passthrough
+set -g allow-passthrough on
+set -as terminal-features ",xterm*:extkeys"
+
